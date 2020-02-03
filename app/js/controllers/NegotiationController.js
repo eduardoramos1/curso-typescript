@@ -6,7 +6,7 @@ class NegotiationController {
     }
     add(ev) {
         ev.preventDefault();
-        const negotiation = new Negotiation(this._inputDate.value, this._inputAmount.value, this._inputValue.value);
+        const negotiation = new Negotiation(new Date(this._inputDate.value.replace(/-/g, ",")), parseInt(this._inputAmount.value), parseFloat(this._inputValue.value));
         console.log(negotiation);
     }
 }
