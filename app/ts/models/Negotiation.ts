@@ -1,4 +1,8 @@
 class Negotiation {
+  private _date;
+  private _amount;
+  private _value;
+
   constructor(date, amount, value) {
     this._date = date;
     this._amount = amount;
