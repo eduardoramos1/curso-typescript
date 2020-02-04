@@ -1,5 +1,5 @@
 // <T> é uma convenção para dizer que o tipo de algo é generico
-class View<T> {
+abstract class View<T> {
   protected _element: Element;
 
   constructor(selector: string) {
@@ -10,7 +10,5 @@ class View<T> {
     this._element.innerHTML = this.template(model);
   }
 
-  template(model: T): string {
-    throw new Error("Metodo template não definido");
-  }
+  abstract template(model: T): string;
 }
