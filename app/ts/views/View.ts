@@ -1,7 +1,6 @@
-declare var $: any;
 // <T> é uma convenção para dizer que o tipo de algo é generico
 abstract class View<T> {
-  protected _element: any;
+  protected _element: JQuery;
 
   constructor(selector: string) {
     this._element = $(selector);
