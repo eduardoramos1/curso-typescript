@@ -1,9 +1,4 @@
-class NegotiationsView {
-  private _element: Element;
-  constructor(selector: string) {
-    this._element = document.querySelector(selector);
-  }
-
+class NegotiationsView extends View {
   update(model: Negotiations): void {
     this._element.innerHTML = this.template(model);
   }
@@ -35,7 +30,7 @@ class NegotiationsView {
                         </tr>
                     `;
                   })
-                  .join("")}
+                  .join()}
             </tbody>
 
             <tfoot>
